@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* ---------------------------------------------------Remove number Arrows--------------------------------------------------- */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ---------------------------------------------------------Container------------------------------------------------------- */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #cd5f9e, #c16bb2, #b277c2, #a082ce, #8e8dd6, #7b98df, #67a2e4, #54ace6, #37bae9, #21c6e6, #2cd2de, #4cdcd3);
+    --color: #fdfdfd;
+    --li-text-color: #212121;
+    --li-background-color: #f2f2f2;
+    --li-border: 1px solid #cecece;
+    --checked-color: #959595;
+    color: var(--color);
+    padding: 10px;
+}
+
+.containerDark {
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    --color: #cecece !important;
+    --li-text-color: #cecece !important;
+    --li-background-color: rgb(32, 38, 57) !important;
+    --checked-color: #777777 !important;
+    --li-border: 1px solid #212121;
+    color: var(--color);
+}
+
+/* ---------------------------------------------------------ToDo App--------------------------------------------------------- */
+
+.todoApp {
+    width: 100%;
+    min-width: 265px;
+    max-width: 540px;
+    margin: 100px auto 100px;
+    padding: 40px 30px 10px;
+    /* glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: var(--li-border);
+}
+
+.todoAppDark {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.todoApp h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: "Sofia", sans-serif;
+    position: relative;
+}
+
+.todoApp h2 img {
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+/* ----------------------------------------------------Theme Toggle Button---------------------------------------------------- */
+
+.theme-switch {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+    margin-left: 50px;
+  }
+  
+  #theme-checkbox {
+    display: none;
+  }
+  
+  #theme-checkbox + label { 
+    font-size: 1.8rem; /* change the font-size below to change the size of the switch button*/
+    height: 1em;
+    width: 2.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    position: relative;
+  }
+  
+  #theme-checkbox:checked + label {
+    background-color: rgb(32, 38, 57);
+  }
+  
+  #theme-checkbox + label:active {
+    transform: scale(0.85);
+    transition: transform 0.2s;
+  }
+  
+  #theme-checkbox + label div {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: inherit;
+    position: absolute;
+    top: 0.1em;
+    left: 0.1em;
+    z-index: 10;
+    transition: 0.5s cubic-bezier(1, 0.33, 0.11, 1.34);
+    background-color: #cecece;
+  }
+  
+  #theme-checkbox:checked + label div {
+    left: 1.6em;
+    background-color: #212121;
+    background-color: rgb(63, 76, 119);
+  }
+  
+  #theme-checkbox + label span {
+    display: flex;
+  }
+  
+  #theme-checkbox + label svg {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    padding: 0.15em;
+    box-sizing: border-box;
+  }
+  
+  #theme-checkbox + label span:first-of-type {
+    color: #3a3a3a;
+  }
+  
+  #theme-checkbox + label span:last-of-type {
+    color: #cecece;
+  }
+
+/* ----------------------------------------------------Input Section---------------------------------------------------- */
+
+.taskInput {
+    font-size: 17px;
+    flex: 1;
+    min-width: 100px !important;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--li-text-color);
+    /* background */
+    background-color: var(--li-background-color);
+    border: var(--li-border);
+}
+
+.row button {
+    padding: 20px;
+    font-size: 17px;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: rgb(185, 213, 208);
+    color: green;
+    cursor: pointer;
+}
+
+.addBtnDark {
+    background-color: rgb(32, 38, 57) !important;
+    color: rgb(63, 76, 119) !important;
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+} 
+
+/* ----------------------------------------------------Len Section---------------------------------------------------- */
+
+.len {
+    font-size: 6px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 0px; 
+}
+
+
+/* ----------------------------------------------------List Items---------------------------------------------------- */
+
+.list {
+    display: flex;
+}
+
+.listItem {
+    list-style: none;
+    padding: 6px;
+    gap: 10px !important;
+    user-select: none;
+    align-items: center;
+    color: rgb(197 , 89, 97);
+    border-radius: 10px;
+    margin: 12px auto 12px;
+    position: relative;
+    /* background */
+    background-color: var(--li-background-color);
+    border: var(--li-border);
+}
+
+.taskTxt {
+    padding-right: 60px;
+    background: transparent;
+    border: none;
+    text-align: left !important;
+    color: var(--li-text-color);
+    font-size: 17px;
+}
+
+.toggleBtn {
+    background-color: transparent !important;
+    background-image: url("../images/checkbox-unchecked.png");
+    width: 50px;
+    background-position: 50%;
+    left: 6px;
+    padding-right: 55px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    box-shadow: none;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    display: flex;
+}
+
+.toggleBtnChecked {
+    background-image: url("../images/checkbox-checked.png") !important;
+}
+
+.deleteTask {
+    background-color: transparent !important;
+    background-image: url("../images/close.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 6px;
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+}
+
+.textChecked {
+    text-decoration: line-through;
+    color: var(--checked-color);
+}
+
+/* ----------------------------------------------------Len Section---------------------------------------------------- */
+
+.LineTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+.LineTitle h1 {
+    font-size: 12px;
+}
+
+.expandBtn {
+    background: url(../images/down.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    border: none;
+}
+
+.expandBtnEx {
+    background: url(../images/up.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.recentlycontainer {
+    display: none;
+}
+
+/* -------------------------------------------------------Footer------------------------------------------------------- */
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 11px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(230, 55, 104);
+}
+
+/* ------------------------------------------------------Animation------------------------------------------------------ */
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+    }   
+
+@keyframes fadeIn {
+0% { opacity: 0;
+transform: scale(0.8); }
+100% { opacity: 1; }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease;
+    }
+  
+@keyframes fadeOut {
+0% { opacity: 1; }
+100% { opacity: 0;
+transform: scale(0.8); }
+}
+
+/* ----------------------------------------------------Responsive For Mobile---------------------------------------------------- */
+
+@media (max-width: 500px) {
+    .row input {
+    padding: 14px;
+    }
+
+    .row button {
+        padding: 14px;
+    }
+
+    .todoApp {
+        padding: 40px 10px 10px;
+        margin: 40px auto 100px;
+    }
+
+    .listContainer li {
+        padding: 0px;
+        margin: 10px auto 10px;
+    }
+
+    .row {
+        margin-bottom: 18px;
+    }
+
+    #theme-checkbox + label {
+        font-size: 1.5rem; /* change the font-size below to change the size of the switch button*/
+      }
+
+    .toggleBtn {
+        background-size: 75%;
+    }
+
+    .deleteTask {
+        background-size: 80%;
+    }
+}
