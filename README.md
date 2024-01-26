@@ -14,7 +14,7 @@ This is simple To Do app with html &amp; css &amp; javaScript | I hope it is use
 
 ## Demo 
 
-https://zephinax.github.io/To-Do-App/
+- [Click Here To Show Demo](https://zephinax.github.io/ToDo-App/)
 
 
 ## Authors
