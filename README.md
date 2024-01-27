@@ -8,7 +8,6 @@ This is simple To Do app with html &amp; css &amp; javaScript | I hope it is use
 - Fully responsive design
 - Tasks save on local storage and are not deleted by exiting the browser or refreshing
 - Dark mode
-- Set timer to task (soon)
   
 
 
