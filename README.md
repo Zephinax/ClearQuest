@@ -1,5 +1,7 @@
 <h2 align="center">
-  ClearQuest Todo App<br/>
+  ClearQuest Todo App
+  <br/>
+  <br/>
   <a href="https://zephinax.github.io/ClearQuest/" target="_blank">Click Here To Show Demo</a>
 </h2>
 <br/>
@@ -23,7 +25,7 @@
 
 # To-Do-App
 
-This is simple To Do app with html &amp; css &amp; javaScript | I hope it is useful for you
+This is simple To Do app & I hope it is useful for you
 
 ## Features
 
