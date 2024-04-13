@@ -1,6 +1,6 @@
 <h2 align="center">
-  ToDo-App<br/>
-  <a href="https://zephinax.github.io/ToDo-App/" target="_blank">Click Here To Show Demo</a>
+  ClearQuest Todo App<br/>
+  <a href="https://zephinax.github.io/ClearQuest/" target="_blank">Click Here To Show Demo</a>
 </h2>
 <br/>
 <div align="center" style="display : flex; align-items: center; justify-content: center;"><img src="./demo/darkDemo.webp" alt="Dark Demo Image" width="45%" height="100%" style="vertical-align:middle; display: inline-block;">
